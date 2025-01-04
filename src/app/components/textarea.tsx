@@ -16,7 +16,7 @@ export default function TextareaStyleDefault({
         }}
         rows={10}
         placeholder="type something..."
-        className={`p-2 w-full border-2 block border-black relative shadow-md transition focus:outline-none focus:shadow-xs text-2xl ${firaCode.className}`}
+        className={`bg-customPale p-2 w-full border-2 block border-black relative shadow-md transition focus:outline-none focus:shadow-xs text-2xl ${firaCode.className}`}
       />
     </div>
   );
