@@ -1,16 +1,18 @@
+import Image from "next/image";
+
 export default function SocialMediaCards({ charCount }: { charCount: number }) {
   const platforms = [
     {
-      name: "Twitter",
-      icon: "TWITTER",
+      name: "X",
+      logo: "/images/X-Logo.png",
       color: "text-white",
       count: charCount,
       limit: 280,
-      bgColor: "bg-customBlue", // Tailwind utility for bg-color
+      bgColor: "bg-customBlue",
     },
     {
       name: "Pinterest",
-      icon: "PINTEREST",
+      logo: "/images/pinterest-logo.png",
       color: "text-red-500",
       count: charCount,
       limit: 500,
@@ -18,7 +20,7 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
     },
     {
       name: "LinkedIn",
-      icon: "LINKEDIN",
+      logo: "/images/linkedin-logo.webp",
       color: "text-blue-700",
       count: charCount,
       limit: 1300,
@@ -26,7 +28,7 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
     },
     {
       name: "Instagram",
-      icon: "INSTAGRAM",
+      logo: "/images/instagram-logo.png",
       color: "text-gray-700",
       count: charCount,
       limit: 2200,
@@ -34,7 +36,7 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
     },
     {
       name: "YouTube",
-      icon: "YOUTUBE",
+      logo: "/images/youtube-logo.webp",
       color: "text-red-600",
       count: charCount,
       limit: 5000,
@@ -42,7 +44,7 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
     },
     {
       name: "Facebook",
-      icon: "FACEBOOK",
+      logo: "/images/facebook-logo.png",
       color: "text-blue-600",
       count: charCount,
       limit: 63206,
@@ -51,24 +53,32 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
   ];
 
   return (
-    <div className="flex flex-wrap justify-between gap-4 p-4  ">
+    <div className="flex flex-wrap justify-between gap-4 p-4">
       {platforms.map((platform, index) => {
         const reachedLimit = platform.count > platform.limit;
         return (
           <div key={index} className="relative group">
+            {/* Background shadow */}
             <div className="w-full bg-black h-full transition absolute translate-x-1.5 translate-y-1.5 group-hover:translate-x-2 group-hover:translate-y-2" />
+
+            {/* Card */}
             <div
               className={`flex flex-col items-center justify-center w-36 h-24 shadow-md border-2 relative ${
                 reachedLimit ? "border-red-500" : "border-gray-500"
-              }  ${platform.bgColor}`}
+              } ${platform.bgColor}`}
             >
-              {/* Displaying the icon */}
-              <div className={`text-lg font-bold ${platform.color}`}>
-                {platform.icon}
-              </div>
+              {/* Displaying the logo */}
+
+              <Image
+                alt="logo"
+                className="size-[30px]"
+                width={100}
+                height={100}
+                src={platform.logo}
+              />
 
               {/* Displaying the count/limit */}
-              <div className="text-black font-semibold mt-2">
+              <div className="text-black font-semibold">
                 <span className={reachedLimit ? "text-red-500" : ""}>
                   {platform.count}
                 </span>{" "}
