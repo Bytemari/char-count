@@ -8,7 +8,7 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
       color: "text-white",
       count: charCount,
       limit: 280,
-      bgColor: "bg-customBlue",
+      bgColor: "bg-gray-400",
     },
     {
       name: "Pinterest",
@@ -16,7 +16,7 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
       color: "text-red-500",
       count: charCount,
       limit: 500,
-      bgColor: "bg-customPink",
+      bgColor: "bg-orange-400",
     },
     {
       name: "LinkedIn",
@@ -24,7 +24,7 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
       color: "text-blue-700",
       count: charCount,
       limit: 1300,
-      bgColor: "bg-customGreen",
+      bgColor: "bg-emerald-400",
     },
     {
       name: "Instagram",
@@ -32,7 +32,7 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
       color: "text-gray-700",
       count: charCount,
       limit: 2200,
-      bgColor: "bg-customYellow",
+      bgColor: "bg-yellow-400",
     },
     {
       name: "YouTube",
@@ -40,7 +40,7 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
       color: "text-red-600",
       count: charCount,
       limit: 5000,
-      bgColor: "bg-customViolet",
+      bgColor: "bg-rose-400",
     },
     {
       name: "Facebook",
@@ -48,12 +48,12 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
       color: "text-blue-600",
       count: charCount,
       limit: 63206,
-      bgColor: "bg-gray-100",
+      bgColor: "bg-gray-200",
     },
   ];
 
   return (
-    <div className="flex flex-wrap justify-between gap-4 p-4">
+    <div className="flex flex-wrap justify-between gap-4 p-4 mt-3">
       {platforms.map((platform, index) => {
         const reachedLimit = platform.count > platform.limit;
         return (
