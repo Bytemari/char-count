@@ -16,7 +16,7 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
       color: "text-red-500",
       count: charCount,
       limit: 500,
-      bgColor: "bg-orange-400",
+      bgColor: "bg-rose-300",
     },
     {
       name: "LinkedIn",
@@ -24,7 +24,7 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
       color: "text-blue-700",
       count: charCount,
       limit: 1300,
-      bgColor: "bg-emerald-400",
+      bgColor: "bg-sky-300",
     },
     {
       name: "Instagram",
@@ -32,7 +32,7 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
       color: "text-gray-700",
       count: charCount,
       limit: 2200,
-      bgColor: "bg-yellow-400",
+      bgColor: "bg-yellow-300",
     },
     {
       name: "YouTube",
