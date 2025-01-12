@@ -12,6 +12,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         customBeige: "#E3D1AB",
+        customPale: "#FEF6F0",
       },
     },
   },

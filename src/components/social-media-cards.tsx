@@ -64,7 +64,7 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
             {/* Card */}
             <div
               className={`flex flex-col items-center justify-center w-36 h-24 shadow-md border-2 relative ${
-                reachedLimit ? "border-red-500" : "border-gray-500"
+                reachedLimit ? "border-red-500" : "border-transparent"
               } ${platform.bgColor}`}
             >
               {/* Displaying the logo */}
