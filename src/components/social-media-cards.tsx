@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { Fira_Code } from "next/font/google";
+
+const firaCode = Fira_Code({ subsets: ["latin"] });
 
 export default function SocialMediaCards({ charCount }: { charCount: number }) {
   const platforms = [
@@ -68,17 +71,19 @@ export default function SocialMediaCards({ charCount }: { charCount: number }) {
               } ${platform.bgColor}`}
             >
               {/* Displaying the logo */}
-
-              <Image
-                alt="logo"
-                className="size-[30px]"
-                width={100}
-                height={100}
-                src={platform.logo}
-              />
-
+              <div className="m-1">
+                <Image
+                  alt="logo"
+                  className="size-[30px]"
+                  width={100}
+                  height={100}
+                  src={platform.logo}
+                />
+              </div>
               {/* Displaying the count/limit */}
-              <div className="text-black font-semibold">
+              <div
+                className={`text-black font-normal text-lg ${firaCode.className}`}
+              >
                 <span className={reachedLimit ? "text-red-500" : ""}>
                   {platform.count}
                 </span>{" "}
