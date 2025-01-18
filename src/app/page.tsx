@@ -4,6 +4,7 @@ import { useState } from "react";
 import SocialMediaCards from "../components/social-media-cards";
 import TextareaStyleDefault from "../components/textarea";
 import { Press_Start_2P } from "next/font/google";
+import Image from "next/image";
 
 const pressStart = Press_Start_2P({
   subsets: ["latin"],
@@ -17,14 +18,28 @@ export default function Home() {
     setCharCount(count);
   };
 
+  const gifSize = 50;
+
   return (
     <div>
-      <div>
-        <h1
-          className={`text-center text-5xl text-white mt-20 ${pressStart.className}`}
-        >
+      <div className="flex justify-center items-center mt-20">
+        <Image
+          className="block"
+          src="/images/cat.gif"
+          width={gifSize}
+          height={gifSize}
+          alt="cat image"
+        />
+        <h1 className={`text-5xl mx-4 text-white ${pressStart.className}`}>
           CHARCOUNT
         </h1>
+        <Image
+          className="block -ml-3"
+          src="/images/cat.gif"
+          width={gifSize}
+          height={gifSize}
+          alt="cat image"
+        />
       </div>
       <div className="flex justify-center mt-10">
         <TextareaStyleDefault handleCharCount={handleCharCount} />
