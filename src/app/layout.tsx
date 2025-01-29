@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Char Count App",
+  title: "Simple Text Counter!",
   description: "Simple word analytics!",
 };
 
