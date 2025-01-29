@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="flex justify-center items-center mt-20">
+      <div className="flex justify-center items-center mt-14">
         <Image
           className="block"
           src="/images/cat.gif"
@@ -41,7 +41,7 @@ export default function Home() {
           alt="cat image"
         />
       </div>
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center mt-5">
         <TextareaStyleDefault handleCharCount={handleCharCount} />
       </div>
       <div className="flex justify-center">
